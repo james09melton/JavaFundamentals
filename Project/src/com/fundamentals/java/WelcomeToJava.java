@@ -15,7 +15,31 @@ public class WelcomeToJava {
 		// stringExamples();
 		// moreStringExamples();
 		// dataTypeExamples();
-		scannerExample();
+		//scannerExample();
+		//myOperatorExample();
+		myAssignmentExample();
+	}
+	
+	public static void myAssignmentExample() {
+		AssignmentExample ae = new AssignmentExample();
+		ae.plusEqualsExample();
+		ae.minusEqualsExample();
+		ae.multiplyEqualsExample();
+		ae.divisionEqualsExample();
+		ae.modulusEqualsExample();
+		ae.leftShiftEqualsExample();
+		ae.rightShiftEqualsExample();
+		ae.bitwiseAndEqualsExample();
+		ae.bitwiseOrEqualsExample();
+	}
+	
+	public static void myOperatorExample() {
+		OperatorExamples oe = new OperatorExamples();
+		oe.incrementExample();
+		oe.decrementExample();
+		oe.equalsExample();
+		oe.equalsExample2();
+		oe.logicalExample();
 	}
 
 	// My first method
@@ -81,6 +105,6 @@ public class WelcomeToJava {
 		y = in.nextInt();
 		z = x + y;
 		System.out.println("Sum of entered integers = " + z);
-
+		in.close();
 	}
 }
