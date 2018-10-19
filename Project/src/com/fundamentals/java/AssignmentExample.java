@@ -47,13 +47,13 @@ public class AssignmentExample {
 	
 	public void bitwiseAndEqualsExample() {
 		int total = 10;
-		total &= value; // same as total = total &= value
+		total &= value; // same as total = total & value
 		System.out.println(total);
 	}
 	
 	public void bitwiseOrEqualsExample() {
 		int total = 10;
-		total ^= value; // same as total = total ^= value
+		total ^= value; // same as total = total ^ value
 		System.out.println(total);
 	}
 }
