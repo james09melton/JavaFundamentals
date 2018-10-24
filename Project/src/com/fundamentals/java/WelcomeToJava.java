@@ -1,5 +1,6 @@
 package com.fundamentals.java;
 
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 /*
@@ -19,7 +20,108 @@ public class WelcomeToJava {
 		// myOperatorExample();
 		// myAssignmentExample();
 		// myDecisionExample();
-		mySongExamples();
+		// mySongExamples();
+		// myHouse();
+		// sampleArray();
+		// myTwoDimensionArray();
+		myJaggedArray();
+	}
+	
+	public static void myJaggedArray() {
+int [][] anArray = new int[3][5];
+		
+		anArray[0][0] = 6;
+		anArray[0][1] = 8;
+		anArray[0][2] = 10;
+		anArray[0][3] = 11;
+		anArray[0][4] = 13;
+		anArray[1][0] = 12;
+		anArray[1][1] = 14;
+		anArray[1][2] = 16;
+		anArray[1][3] = 17;
+		anArray[1][4] = 19;
+		anArray[2][0] = 18;
+		anArray[2][1] = 20;
+		anArray[2][2] = 22;
+		anArray[2][3] = 21;
+		anArray[2][4] = 23;
+		System.out.println(anArray[0].length);
+		for(int i = 0; i< anArray.length; i++) {
+			for(int j = 0; j< anArray[i].length; j++) {
+				System.out.println(anArray[i][j]);	
+			}
+		}
+	}
+	
+	public static void myTwoDimensionArray() {
+		int [][] anArray = new int[3][3];
+		
+		anArray[0][0] = 6;
+		anArray[0][1] = 8;
+		anArray[0][2] = 10;
+		anArray[1][0] = 12;
+		anArray[1][1] = 14;
+		anArray[1][2] = 16;
+		anArray[2][0] = 18;
+		anArray[2][1] = 20;
+		anArray[2][2] = 22;
+		//System.out.println(anArray.length);
+		for(int i = 0; i< anArray.length; i++) {
+			for(int j = 0; j< anArray.length; j++) {
+				System.out.println(anArray[i][j]);	
+			}
+		}
+	}
+	
+	public static void sampleArray() {
+		String[] myStringArray = {"happy", "monday", "java"};
+		int[] myIntArray = new int[3];
+		myIntArray[0] = 5;
+		myIntArray[1] = 17;
+		myIntArray[2] = 10;
+		
+		int[] mySecondIntArray = myIntArray.clone();
+		
+		
+		for(int i = 0; i < myIntArray.length; i ++) {
+			System.out.println(myIntArray[i]);
+		}
+		for(int i = 0; i< mySecondIntArray.length; i++) {
+			System.out.println(mySecondIntArray[i]);
+		}
+		
+		int j = 0;
+		while(j < myStringArray.length) {
+			System.out.println(myStringArray[j]);
+			j ++;
+		}
+	}
+	
+	public static void myBicycle() {
+		Bicycle myBicycle = new Bicycle();
+	}
+	
+	public static void myHouse() {
+		House myHouse = new House();
+		myHouse.doors = "Red Doors";
+		
+		House mySecondHome = new House();
+		mySecondHome.doors = "Purple Doors";
+		
+		House myThirdHome = myHouse;
+		myHouse = mySecondHome;
+		
+		House[] houseArray = new House[] { myHouse, mySecondHome, myThirdHome};
+		
+		//System.out.println(myHouse.doors);
+		//System.out.println(mySecondHome.doors);
+		//System.out.println(myThirdHome.doors);
+		
+		int i = 0;
+		do {
+			System.out.println(houseArray[i].doors);
+			i++;
+		} while(i < houseArray.length);
 	}
 	
 	public static void mySongExamples() {
