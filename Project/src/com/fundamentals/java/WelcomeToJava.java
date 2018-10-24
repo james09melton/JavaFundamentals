@@ -1,8 +1,7 @@
 package com.fundamentals.java;
 
-import java.lang.reflect.Array;
 import java.util.Scanner;
-
+import com.fundamentals.data.*;
 /*
  public - Access Modifier
  class - File type
@@ -24,7 +23,14 @@ public class WelcomeToJava {
 		// myHouse();
 		// sampleArray();
 		// myTwoDimensionArray();
-		myJaggedArray();
+		// myJaggedArray();
+		accessModifierExamples();
+	}
+	
+	public static void accessModifierExamples() {
+		PrimitiveExamples pe = new PrimitiveExamples();
+		Apple myApple = new Apple();
+		pe.myProtectedMethod();
 	}
 	
 	public static void myJaggedArray() {
