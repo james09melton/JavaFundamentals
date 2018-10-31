@@ -2,11 +2,33 @@ package com.fundamentals.java;
 
 public class House {
 	
- public String windows;
+ private String windows;
+ private String doors;
+ private boolean hasStairs;
  
- public String doors;
+ public void setWindows(String value) {
+	 this.windows = value;
+ }
  
- public boolean hasStairs;
+ public String getWindows() {
+	 return windows;
+ }
+ 
+ public void setDoors(String doors) {
+	 this.doors = doors;
+ }
+ 
+ public String getDoors() {
+	 return doors;
+ }
+ 
+ public void setHasStairs(boolean value) {
+	 this.hasStairs = value;
+ }
+ 
+ public boolean getHasStairs() {
+	 return hasStairs;
+ }
  
  public void openDoor() {
 	 

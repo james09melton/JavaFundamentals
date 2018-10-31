@@ -20,11 +20,19 @@ public class WelcomeToJava {
 		// myAssignmentExample();
 		// myDecisionExample();
 		// mySongExamples();
-		// myHouse();
+		myHouse();
 		// sampleArray();
 		// myTwoDimensionArray();
 		// myJaggedArray();
-		accessModifierExamples();
+		// accessModifierExamples();
+		// Quiz();
+	}
+	
+	public static void Quiz() {
+		Quiz jq = new Quiz();
+		jq.partOne();
+		jq.grade('0');
+		jq.divByThr();
 	}
 	
 	public static void accessModifierExamples() {
@@ -109,23 +117,25 @@ int [][] anArray = new int[3][5];
 	
 	public static void myHouse() {
 		House myHouse = new House();
-		myHouse.doors = "Red Doors";
+		//myHouse.doors = "Red Doors";
+		myHouse.setDoors("Red Doors");
 		
 		House mySecondHome = new House();
-		mySecondHome.doors = "Purple Doors";
+		//mySecondHome.doors = "Purple Doors";
+		mySecondHome.setDoors("Purple Doors");
 		
 		House myThirdHome = myHouse;
 		myHouse = mySecondHome;
 		
 		House[] houseArray = new House[] { myHouse, mySecondHome, myThirdHome};
 		
-		//System.out.println(myHouse.doors);
-		//System.out.println(mySecondHome.doors);
-		//System.out.println(myThirdHome.doors);
+		System.out.println(myHouse.getDoors());
+		System.out.println(mySecondHome.getDoors());
+		System.out.println(myThirdHome.getDoors());
 		
 		int i = 0;
 		do {
-			System.out.println(houseArray[i].doors);
+			System.out.println(houseArray[i].getDoors());
 			i++;
 		} while(i < houseArray.length);
 	}
