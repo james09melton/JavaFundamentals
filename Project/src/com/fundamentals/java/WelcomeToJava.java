@@ -20,19 +20,32 @@ public class WelcomeToJava {
 		// myAssignmentExample();
 		// myDecisionExample();
 		// mySongExamples();
-		myHouse();
+		// myHouse();
 		// sampleArray();
 		// myTwoDimensionArray();
 		// myJaggedArray();
 		// accessModifierExamples();
-		// Quiz();
+		// Quiz();	
+		// inheritanceExamples();
+		myBicycle();
+	}
+	
+	public static void inheritanceExamples() {
+		House house = new House();
+		Condo condo = new Condo();
+		condo.setDoors("Red Door");
+		System.out.println(condo.getDoors());
+		house.setDoors("Purple Door");
+		System.out.println(house.getDoors());
 	}
 	
 	public static void Quiz() {
 		Quiz jq = new Quiz();
-		jq.partOne();
-		jq.grade('0');
-		jq.divByThr();
+		//jq.partOne();
+		//jq.grade('0');
+		//jq.divByThr();
+		//jq.evenNumbers();
+		jq.oddNumbers();
 	}
 	
 	public static void accessModifierExamples() {
@@ -112,7 +125,8 @@ int [][] anArray = new int[3][5];
 	}
 	
 	public static void myBicycle() {
-		Bicycle myBicycle = new Bicycle();
+		Bicycle bicycle = new Bicycle();
+		MotorizedBicycle motorizedBicycle = new MotorizedBicycle();
 	}
 	
 	public static void myHouse() {

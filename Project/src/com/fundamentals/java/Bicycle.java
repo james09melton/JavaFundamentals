@@ -9,6 +9,7 @@ public class Bicycle {
 	public void setPedals(String pedals) {
 		this.pedals = pedals;
 	}
+	
 	 public String getPedals() {
 		return pedals;
 	 }
