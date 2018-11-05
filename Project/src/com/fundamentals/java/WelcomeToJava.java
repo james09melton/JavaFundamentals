@@ -27,7 +27,26 @@ public class WelcomeToJava {
 		// accessModifierExamples();
 		// Quiz();	
 		// inheritanceExamples();
-		myBicycle();
+		// myBicycle();
+		// overloadExample();
+		// overrideExample();
+	}
+	
+	public static void overrideExample() {
+		House myHouse = new House();
+		Condo myCondo = new Condo();
+		House myOtherHouse = new Condo();
+		myHouse.openDoor();
+		myCondo.openDoor();
+		myOtherHouse.openDoor();
+	}
+	
+	public static void overloadExample() {
+		Apple myApple = new Apple();
+		myApple.display("Granny Smiths", 5);
+		myApple.display("Sour", 3, "Red");
+		// String show = myApple.display("Granny Smiths", "Green");
+		System.out.println(myApple.display("Granny Smiths", "Green"));
 	}
 	
 	public static void inheritanceExamples() {
@@ -127,6 +146,8 @@ int [][] anArray = new int[3][5];
 	public static void myBicycle() {
 		Bicycle bicycle = new Bicycle();
 		MotorizedBicycle motorizedBicycle = new MotorizedBicycle();
+		//bicycle.pedalling();
+		motorizedBicycle.pedalling();
 	}
 	
 	public static void myHouse() {

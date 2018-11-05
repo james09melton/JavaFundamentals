@@ -10,4 +10,11 @@ public class MotorizedBicycle extends Bicycle {
 	public String getHasEngine() {
 		return hasEngine;
 	}
+	
+	@Override
+	public void pedalling() {
+		super.pedalling();
+		System.out.println("Pedalling Fast");
+	}
+	
 }

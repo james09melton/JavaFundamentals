@@ -31,8 +31,8 @@ public class Bicycle {
 			 }
 			 
 	
-	public void pedaling() {
-	
+	public void pedalling() {
+	System.out.println("Pedalling Slow");
 	}
 	
 	public void steering() {
