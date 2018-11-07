@@ -1,7 +1,9 @@
 package com.fundamentals.data;
 
 public class Apple {
-
+	public static final int SOUR_SCALE = 10;
+	public static int SWEET_SCALE = 20;
+	
 	int size = 1;
 	public String color = "red";
 	
