@@ -7,7 +7,7 @@ import com.fundamentals.data.*;
  class - File type
  WelcomeToJava - Name of class
  */
-public class WelcomeToJava {
+public class WelcomeToJava{
 
 	public static final int MY_VALUE = 10;
 	public static int MY_OTHER_VALUE;
@@ -42,9 +42,62 @@ public class WelcomeToJava {
 		// myBicycle();
 		// overloadExample();
 		// overrideExample();
-		sampleUtility();
+		// sampleUtility();
 		// something(); // Can not run in a static method
+		 // quiz2();
+		// mySubtraction();
+		// Dinosaurs();
+		// myAbstractExample();
+		myInterfaceExample();
 	}
+	
+	public static void myInterfaceExample(){
+		House myHouse = new House();
+		Condo myCondo = new Condo();
+		
+		myHouse.decorate();
+		myHouse.installPlumbing();
+		myCondo.decorate();
+		myHouse.supplementWork();
+	}
+	
+	public static void myAbstractExample() {
+		//Can't create an instance of an abstract class
+		//Shape shape = new Shape(); // Not valid
+		System.out.println(Shape.area(5, 10));
+		Square square = new Square();
+		System.out.println(square.draw());
+		Rectangle rec = new Rectangle();
+		System.out.println(rec.draw());
+		rec.setLength(10);
+		rec.setWidth(5);
+		System.out.println(Shape.area(rec.getLength(), rec.getWidth()));
+		
+		MyOctogon mo = new MyOctogon();
+	}
+	
+	public static void Dinosaurs() {
+		Dinosaur myDinosaur = new Dinosaur();
+		TRex myTRex = new TRex();
+		Pterodactyl myPterodactyl = new Pterodactyl();
+		
+		Dinosaur.Action();
+		TRex.Action();
+		Pterodactyl.Action();
+	}
+	
+	public static void quiz2() {
+		Quiz2 q2 = new Quiz2();
+		q2.publicExample();
+		q2.protectedExample();
+	
+	}
+	
+	public static void mySubtraction() {
+		System.out.println(Quiz2.mySubtraction(10, 5));
+	}
+	
+	
 	
 	public static void sampleUtility() {
 		System.out.println(Utility.addSomething(5, 23));
@@ -96,7 +149,7 @@ public class WelcomeToJava {
 	
 	public static void accessModifierExamples() {
 		PrimitiveExamples pe = new PrimitiveExamples();
-		Apple myApple = new Apple();
+		//Apple myApple = new Apple();
 		pe.myProtectedMethod();
 	}
 	
