@@ -24,4 +24,9 @@ public class Dinosaur {
 	 public static void Action() {
 		 System.out.println("Roar");
 	 }
+	 
+	 public Dinosaur(String teeth) {
+		 this.teeth = teeth;
+		 this.claws = "rough";
+	 }
 }

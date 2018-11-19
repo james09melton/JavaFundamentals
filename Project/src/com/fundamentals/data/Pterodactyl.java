@@ -1,6 +1,11 @@
 package com.fundamentals.data;
 
 public class Pterodactyl extends Dinosaur {
+	public Pterodactyl(String teeth) {
+		super(teeth);
+		// TODO Auto-generated constructor stub
+	}
+
 	private boolean hasWings;
 	
 	public void setHasWings(boolean hasWings) {
