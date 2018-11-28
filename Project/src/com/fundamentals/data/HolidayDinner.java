@@ -1,16 +1,16 @@
 package com.fundamentals.data;
 
 public class HolidayDinner {
-	
+
 	public void letsEat() {
 		Dinner[] d1 = Dinner.values();
-		for(Dinner myDinner : d1) {
-			System.out.println( myDinner + " at index " + myDinner.ordinal());
+		for (Dinner myDinner : d1) {
+			System.out.println(myDinner + " at index " + myDinner.ordinal());
 		}
 	}
-	
+
 	public void letsChoose(Dinner type) {
-		switch(type) {
+		switch (type) {
 		case Turkey:
 			System.out.println("Love me some Turkey");
 			break;
@@ -25,5 +25,5 @@ public class HolidayDinner {
 			break;
 		}
 	}
-	
+
 }

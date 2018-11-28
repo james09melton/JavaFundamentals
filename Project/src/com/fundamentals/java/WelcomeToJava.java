@@ -10,7 +10,7 @@ import com.fundamentals.data.*;
  WelcomeToJava - Name of class
  */
 
-enum iceCream{
+enum iceCream {
 	Vanilla, Chocolate, Strawberry, Carmel;
 }
 
@@ -62,14 +62,14 @@ public class WelcomeToJava {
 		// enumSample1();
 		exceptionExample();
 	}
-	
+
 	public static void exceptionExample() {
 		ExceptionSample es = new ExceptionSample();
-		//es.myException();
-		//es.mySecondException();
+		// es.myException();
+		// es.mySecondException();
 		es.myThirdException();
 	}
-	
+
 	public static void enumSample1() {
 		iceCream ic = iceCream.Strawberry;
 		System.out.println(ic);
@@ -78,53 +78,55 @@ public class WelcomeToJava {
 		hd.letsChoose(Dinner.Turkey);
 		hd.letsChoose(Dinner.Ham);
 		hd.letsChoose(Dinner.pumpkinPie);
-		
+
 		Dinner d1 = Dinner.MashedPotatoes;
 		System.out.println(d1);
 		d1.readyNow();
 	}
-	
+
 	public static <E> void hashMapExample() {
-		HashMap<Integer, String>myMap = new HashMap<Integer, String>();
+		HashMap<Integer, String> myMap = new HashMap<Integer, String>();
 		myMap.put(0, "Something");
 		myMap.put(1, "Something else");
 		myMap.put(2, "Something");
 		myMap.put(3, "One More");
 		myMap.remove(2);
-		
-		for(String value : myMap.values()) {
+
+		for (String value : myMap.values()) {
 			System.out.println(value);
 		}
-		
-		Set<E>set = (Set<E>) myMap.entrySet();
+
+		Set<E> set = (Set<E>) myMap.entrySet();
 		Iterator iterate = set.iterator();
-		while(iterate.hasNext()) {
-			Map.Entry me = (Map.Entry)iterate.next();
-			System.out.print(me.getKey()+ " : ");
+		while (iterate.hasNext()) {
+			Map.Entry me = (Map.Entry) iterate.next();
+			System.out.print(me.getKey() + " : ");
 			System.out.println(me.getValue());
 		}
 	}
-	
-	/*HashSet ignores duplicates and also order. If the item added is already in the collection,
-	 *  it will not add it, or give any indication that it won't.*/
+
+	/*
+	 * HashSet ignores duplicates and also order. If the item added is already in
+	 * the collection, it will not add it, or give any indication that it won't.
+	 */
 	public static void hashSetExample() {
-		HashSet<String>myString = new HashSet<String>();
+		HashSet<String> myString = new HashSet<String>();
 		myString.add("something");
 		myString.add("something else");
 		myString.add("something");
 		myString.add("something else");
-		for(String s : myString) {
+		for (String s : myString) {
 			System.out.println(s);
 		}
 		Dinosaur dino = new Dinosaur("sharp");
 		Dinosaur dino2 = new Dinosaur("serrated");
 		Dinosaur dino3 = new Dinosaur("dull");
-		HashSet<Dinosaur>myDino = new HashSet<Dinosaur>();
+		HashSet<Dinosaur> myDino = new HashSet<Dinosaur>();
 		myDino.add(dino);
 		myDino.add(dino2);
 		myDino.add(dino3);
-		for(Dinosaur d : myDino) {
-			System.out.println(d.getTeeth()+" "+d.getClaws());
+		for (Dinosaur d : myDino) {
+			System.out.println(d.getTeeth() + " " + d.getClaws());
 		}
 	}
 
