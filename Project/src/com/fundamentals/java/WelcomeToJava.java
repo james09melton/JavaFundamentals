@@ -2,6 +2,14 @@ package com.fundamentals.java;
 
 import java.util.*;
 
+import com.designpattern.structural.BikeFacade;
+import com.designpattern.structural.CustomGrips;
+import com.designpattern.structural.GoldFrameBike;
+import com.designpatterns.base.BikeInterface;
+import com.designpatterns.base.DownhillBike;
+import com.designpatterns.base.NarrowWheel;
+import com.designpatterns.base.TouringBike;
+import com.designpatterns.base.WideWheel;
 import com.fundamentals.data.*;
 
 /*
@@ -26,43 +34,65 @@ public class WelcomeToJava {
 	}
 
 	public static void main(String[] args) {
-		MY_OTHER_VALUE = 35;
-
-		// TODO Auto-generated method stub
-		// someMethod();
-		// stringExamples();
-		// moreStringExamples();
-		// dataTypeExamples();
-		// scannerExample();
-		// myOperatorExample();
-		// myAssignmentExample();
-		// myDecisionExample();
-		// mySongExamples();
-		// myHouse();
-		// sampleArray();
-		// myTwoDimensionArray();
-		// myJaggedArray();
-		// accessModifierExamples();
-		// Quiz();
-		// inheritanceExamples();
-		// myBicycle();
-		// overloadExample();
-		// overrideExample();
-		// sampleUtility();
-		// something(); // Can not run in a static method
-		// quiz2();
-		// mySubtraction();
-		// Dinosaurs();
-		// myAbstractExample();
-		// myInterfaceExample();
-		// arrayListExamples();
-		// arrayListObjectExample();
-		// hashSetExample();
-		// hashMapExample();
-		// enumSample1();
-		exceptionExample();
+		// creationalPatterns();
+		// adapterPatterns();
+		//decoratorPattern();
+		facadePattern();
+	}
+	
+	public static void decoratorPattern() {
+		BikeInterface myTourBike = new TouringBike(new NarrowWheel(24));
+		System.out.println(myTourBike);
+		
+		myTourBike = new GoldFrameBike(myTourBike);
+		System.out.println(myTourBike);
+		
+		myTourBike = new CustomGrips(myTourBike);
+		System.out.println(myTourBike);
+	}
+	
+	public static void facadePattern() {
+		BikeFacade facade = new BikeFacade();
+		facade.prepareForSale(new DownhillBike(new WideWheel(24)));
 	}
 
+	public static void fundamentalExamples() {
+		MY_OTHER_VALUE = 35;
+		
+		// someMethod();
+				// stringExamples();
+				// moreStringExamples();
+				// dataTypeExamples();
+				// scannerExample();
+				// myOperatorExample();
+				// myAssignmentExample();
+				// myDecisionExample();
+				// mySongExamples();
+				// myHouse();
+				// sampleArray();
+				// myTwoDimensionArray();
+				// myJaggedArray();
+				// accessModifierExamples();
+				// Quiz();
+				// inheritanceExamples();
+				// myBicycle();
+				// overloadExample();
+				// overrideExample();
+				// sampleUtility();
+				// something(); // Can not run in a static method
+				// quiz2();
+				// mySubtraction();
+				// Dinosaurs();
+				// myAbstractExample();
+				// myInterfaceExample();
+				// arrayListExamples();
+				// arrayListObjectExample();
+				// hashSetExample();
+				// hashMapExample();
+				// enumSample1();
+				// exceptionExample();
+	}
+	
 	public static void exceptionExample() {
 		ExceptionSample es = new ExceptionSample();
 		// es.myException();
